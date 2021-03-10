@@ -1,5 +1,5 @@
 package iitu.kz.entities;
 
 public enum EmployeeType {
-    CurrentEmployee, FixedEmployee, HourlyEmployee, SaleEmployee;
+    SALARIED, HOURLY, COMMISION, SALARIED_COMMISION
 }

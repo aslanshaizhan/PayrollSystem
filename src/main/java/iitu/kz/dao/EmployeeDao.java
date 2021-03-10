@@ -1,6 +1,6 @@
 package iitu.kz.dao;
 
-import iitu.kz.entities.CurrentEmployee;
+import iitu.kz.entities.Employee;
 import iitu.kz.events.EmployeeCreateEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
@@ -11,14 +11,14 @@ public class EmployeeDao implements ApplicationEventPublisherAware{
 
         private ApplicationEventPublisher eventPublisher;
 
-        public void create(CurrentEmployee employee) {
+        public void create(Employee employee) {
             System.out.println("EmployeeDao.create");
             System.out.println("employee = " + employee);
 
             this.eventPublisher.publishEvent(new EmployeeCreateEvent(this, employee));
         }
 
-        public void update(Long id, CurrentEmployee employee) {
+        public void update(Long id, Employee employee) {
             System.out.println("EmployeeDao.update");
         }
 

@@ -1,18 +1,18 @@
 package iitu.kz.events;
 
-import iitu.kz.entities.CurrentEmployee;
+import iitu.kz.entities.Employee;
 import org.springframework.context.ApplicationEvent;
 
 public class EmployeeCreateEvent extends ApplicationEvent {
 
-    private CurrentEmployee employee;
+    private Employee employee;
 
-    public EmployeeCreateEvent(Object source, CurrentEmployee employee) {
+    public EmployeeCreateEvent(Object source, Employee employee) {
         super(source);
         this.employee = employee;
     }
 
-    public CurrentEmployee getEmployee() {
+    public Employee getEmployee() {
         return employee;
     }
 
